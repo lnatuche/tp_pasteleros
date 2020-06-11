@@ -10,8 +10,25 @@ test "sonia con cuchara y sin ingredientes tiene habilidad 3" {
 	sonia.instrumento(cuchara)
 	assert.equals(sonia.habilidad(), 3)
 }
-
 test "samanta no puede preparar su postre favorito" {
 	assert.notThat(samanta.puedePrepararSuPostreFavorito())
 }
-
+test "samanta tiene 9 de habilidad"{
+	assert.equals(9, samanta.habilidad())
+}
+test "samanta es la pastelera mas habilidosa"{
+	assert.equals(samanta, programa.masHabilidoso())
+}
+test "entre el mas habilidoso y el menos habilidoso es de 7.1"{
+	assert.equals(7.1 , programa.diferenciaDeHabilidad())
+}
+test "marcos con 2 años de experiencia y con sus ingredientes inciales tiene 3.9 de habilidad" {
+	marcos.experiencia(2)
+	assert.equals(3.9, marcos.habilidad())
+}
+test 'sonia con cuaderno de recentas de 5 paginas y 2kg de chocolate tiene 8 de habilidad'{
+	cuadernoDeRecetas.paginas(5)
+	sonia.ingrediente(new Ingredientes(nombre = "chocolate", cantidad = 2))
+	sonia.instrumento(cuadernoDeRecetas)
+	assert.equals(8, sonia.habilidad())
+}
