@@ -1,0 +1,17 @@
+import pasteleros.*
+
+
+test "samanta no tiene ingredientes" {
+	assert.that(samanta.ingredientes().isEmpty())
+}
+
+test "sonia con cuchara y sin ingredientes tiene habilidad 3" {
+	sonia.descartarIngredientes()
+	sonia.instrumento(cuchara)
+	assert.equals(sonia.habilidad(), 3)
+}
+
+test "samanta no puede preparar su postre favorito" {
+	assert.notThat(samanta.puedePrepararSuPostreFavorito())
+}
+

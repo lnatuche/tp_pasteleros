@@ -1,0 +1,3 @@
+object jurado {
+	const platos = []
+}
